@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rémunération d'un professeur des écoles</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Rémunération d'un professeur des écoles</h1>
+    <p class="subtitle">
+      Composition de la paie échelon par échelon. Les revenus s'empilent au-dessus de zéro,
+      les prélèvements obligatoires se déduisent en dessous, et la ligne donne le net
+      réellement disponible.
+    </p>
+    <div class="tags">
+      <span class="tag">Point d'indice <strong>4,92278 €</strong>, gelé depuis juillet 2023</span>
+      <span class="tag">Barème de l'impôt <strong>2026</strong></span>
+      <span class="tag">Temps plein, <strong>1 part fiscale</strong></span>
+      <span class="tag">Sans indemnité de résidence ni supplément familial</span>
+    </div>
+  </header>
+
+  <form id="controls" class="controls"></form>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Du brut au net disponible</h2>
+    </div>
+    <div class="chart-box">
+      <canvas id="payChart"></canvas>
+    </div>
+    <div class="legend" id="legend"></div>
+  </section>
+
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Ma situation</h2>
+      <button type="button" class="ghost" id="resetSituation">Réinitialiser</button>
+    </div>
+    <form id="situation" class="fields"></form>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Projection de l'épargne</h2>
+    </div>
+    <p class="warning" id="projectionWarning" hidden></p>
+    <div class="stats" id="projectionStats"></div>
+    <div class="chart-box chart-box-short">
+      <canvas id="projectionChart"></canvas>
+    </div>
+    <div class="legend" id="projectionLegend"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Budget mensuel</h2>
+      <button type="button" class="ghost" id="addCategory">Ajouter une catégorie</button>
+    </div>
+    <div class="stats" id="budgetStats"></div>
+    <div id="budgetList" class="budget-list"></div>
+  </section>
+
+  <section class="card">
+    <div class="card-head">
+      <h2>Sauvegarde</h2>
+    </div>
+    <p class="save-note" id="saveNote"></p>
+    <div class="actions">
+      <button type="button" class="ghost" id="exportJson">Exporter mes données</button>
+      <label class="ghost file-label">
+        Importer un fichier
+        <input type="file" id="importJson" accept="application/json,.json" hidden>
+      </label>
+      <button type="button" class="ghost" id="exportPng">Exporter le graphique en image</button>
+    </div>
+  </section>
+
+  <p class="disclaimer">
+    Estimation à partir des textes en vigueur en septembre 2026, sans valeur officielle.
+    Les montants signalés « à recouper » ne sont pas confirmés sur source primaire, les
+    autres peuvent changer à tout moment, et seul le simulateur du ministère fait foi.
+  </p>
+
+</div>
+
+<script src="vendor/chart.umd.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/model.js"></script>
+<script src="js/projection.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/chart.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

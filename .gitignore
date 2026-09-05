@@ -1,0 +1,9 @@
+# Dossier de travail, non publié : sources d'audit et cas personnel
+prive/
+
+# Exports produits par la page, ils contiennent des données personnelles
+budget-pe-*.json
+projection-epargne*.png
+
+# Système
+.DS_Store
