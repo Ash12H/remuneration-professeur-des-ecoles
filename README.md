@@ -127,5 +127,8 @@ Les indemnités de direction d'école, de conseiller pédagogique et de PEMF son
 
 ## Licence
 
-Aucune licence n'est déclarée pour l'instant, le code reste donc sous droits réservés.
-Chart.js, dans `vendor/`, est distribué sous licence MIT par ses auteurs.
+Licence MIT, voir le fichier [LICENSE](LICENSE). Chart.js, dans `vendor/`, est distribué
+sous licence MIT par ses auteurs et garde sa propre notice.
+
+Les données réglementaires citées, grilles indiciaires, barèmes et montants d'indemnités,
+proviennent de textes officiels français et ne sont pas couvertes par cette licence.
